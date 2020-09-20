@@ -1,0 +1,682 @@
+@charset "UTF-8";
+
+/*========= base ===========*/
+
+html {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+}
+
+h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul,li,dl,dt,dd {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: .3s;
+  opacity: 0.6;
+}
+
+
+/*共通*/
+.content-wrapper {
+   width: 1200px;
+   margin: 0 auto;
+ }
+
+@media screen and (max-width:798px){
+  .content-wrapper{
+    width:100%;
+  }
+}
+
+
+/*ヘッダー*/
+.header{
+  width:100%;
+}
+
+.header h1{
+font-size: 40px;
+font-weight: bold;
+font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',
+sans-serif;
+margin-left:20px;
+}
+
+.header-nav{
+  height:100px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header-list{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header-list li{
+  margin-right:40px;
+font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',
+sans-serif;
+}
+
+.header-list li:hover{
+  cursor: pointer;
+  opacity:0.6;
+}
+
+.click{
+  display: none;
+}
+
+@media screen and (max-width:798px){
+  .header h1{
+  font-size: 25px;
+  text-align:left;
+  }
+
+  .header-nav{
+    display: block;
+    position: relative;
+  }
+
+
+  .header-list{
+width:48%;
+height:100%;
+display: block;
+color: black;
+position: fixed;
+top:0;
+left:-100%;
+z-index: 100;
+text-align:right;
+background-color:rgb(220,220,220,0.6);
+transition: all 0.8s;
+}
+
+.header-list.is-active{
+  left:0;
+}
+
+.header-list li{
+  margin: 50px 40px;
+  text-align:center;
+}
+
+.click{
+  display: block;
+  position: absolute;
+  top:0;
+  right:10%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.click img{
+  width:50px;
+  height:50px;
+}
+
+.click p{
+  margin:0 0;
+}
+
+}
+
+/*メイン*/
+.mainvisual{
+  position:relative;
+  height:600px;
+}
+
+.mainvisual img{
+  width:70%;
+  height:500px;
+  object-fit:cover;
+  position: absolute;
+  top:5%;
+  left:25%;
+}
+
+.mainvisual h2{
+  position:absolute;
+  top:40%;
+  left:40%;
+  font-family: 'HanziPen SC','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  font-weight: bold;
+  background:rgba(255, 255, 255, 0.6);
+  font-size:2.5rem;
+  padding:1rem;
+}
+
+.bg1{
+  height:600px;
+  width:40%;
+  position:absolute;
+  top:-5%;
+  left:-15%;
+  opacity: 0.6;
+  Z-index:-1;
+}
+
+.bg1 img{
+  width:100%;
+  height:100%;
+}
+
+@media screen and (max-width:798px){
+  .mainvisual{
+    height:800px;
+  }
+
+  .mainvisual img{
+    width:100%;
+    position:static;
+  }
+
+  .mainvisual h2{
+    position:absolute;
+    top:30%;
+    left:0;
+    font-size:2rem;
+    padding:1rem;
+  }
+
+  .bg1{
+    height:600px;
+    width:90%;
+    position:absolute;
+    top:30%;
+    left:5%;
+    Z-index:-1;
+  }
+
+  .bg1 img{
+    width:100%;
+    height:100%;
+  }
+}
+
+
+/*greeting*/
+.greeting {
+  width:100%;
+  margin:80px auto;
+}
+.contents{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.greeting img{
+  width:400px;
+  height:400px;
+  border-radius: 50% 50%;
+}
+
+.greeting .content{
+  width:600px;
+  text-align:center;
+}
+
+.greeting h2{
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom:50px;
+font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.greeting p{
+font-family: 'HanziPen TC',sans-serif;
+font-size: 22px;
+font-weight: bold;
+}
+
+@media screen and (max-width:798px){
+  .contents{
+    display:block;
+  }
+
+  .greeting {
+    margin:30px auto;
+  }
+
+  .greeting img{
+    width:100%;
+  }
+
+  .greeting .content{
+    width:100%;
+  }
+}
+
+/*profill*/
+.profill{
+  width:100%;
+  height:500px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.profill img{
+  width:400px;
+  height:400px;
+  border-radius: 50% 50%;
+  position: absolute;
+  right:10%;
+}
+
+.profill-text{
+  width:600px;
+  position: absolute;
+  left:10%;
+  text-align: center;
+}
+
+.profill-text h2{
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom:20px;
+font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.profill-list{
+font-family: 'HanziPen TC',sans-serif;
+font-size: 18px;
+font-weight: bold;
+}
+
+.profill-list li{
+  margin:15px 0;
+}
+
+@media screen and (max-width:798px){
+  .profill{
+    width:100%;
+    height:auto;
+    margin: 40px 0;
+    position:static;
+  }
+
+  .profill img{
+    width:100%;
+    height:400px;
+    position:static;
+  }
+
+  .profill-text{
+    width:100%;
+    position:static;
+  }
+}
+
+/*news*/
+.news{
+  width:1200px;
+  margin:0 auto;
+  margin-bottom:100px;
+}
+
+.news h2{
+  display:inline-block;
+  margin-bottom:50px;
+  text-align:center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+ border-bottom: 1.5px solid black;
+}
+
+
+.news li{
+  border-bottom:dotted 1px #dedede;
+  padding-top:20px;
+  text-align: center;
+}
+
+.news li a{
+  color:#333333;
+}
+
+.news li a:hover{
+  opacity:0.6;
+}
+
+
+.news li time{
+  font-size:0.75em;
+  color:#949494;
+  padding-right:0px;
+  margin-right:80px;
+}
+
+@media screen and (max-width:798px){
+  .news{
+    width:100%;
+    margin:0 auto;
+    margin-bottom:100px;
+      text-align: center;
+  }
+
+  .news h2{
+   border-bottom: 1.5px solid black;
+  }
+}
+
+
+/*work*/
+.work{
+  width:100%;
+  padding-top:40px;
+  position:relative;
+  margin: 80px 0;
+}
+
+.work::before{
+  content:'';
+  background:#e8e7e7;
+  position:absolute;
+  width:100%;
+  height:300px;
+  z-index:-1;
+}
+
+.work h2{
+  margin-bottom:20px;
+  text-align:center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.work-list{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+}
+
+.work-list li{
+  width:400px;
+}
+
+.work-list h3{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+}
+
+.work-list figure{
+  margin:0 auto;
+}
+
+@media screen and (max-width:798px){
+
+.work{
+}
+  .work-list{
+    display:block;
+  }
+
+  .work-list li{
+    width:100%;
+  }
+
+  .work h2{
+  border-bottom: 2px solid black;
+  }
+}
+
+
+/*ec-saito*/
+.ec-saito{
+  position:relative;
+  width:100%;
+  height:400px;
+  margin: 50px 0;
+}
+
+.ec-saito img{
+  width:600px;
+  height:400px;
+  position:absolute;
+  top:0;
+  left:10%;
+  object-fit: cover;
+}
+
+.ec-saito img::after{
+  content:"";
+  width: 80%;
+　　 height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color:rgba(0,0,0,0.4);
+}
+
+.ec-saito h2 a{
+  position:absolute;
+  top:32%;
+  right:15%;
+  width:300px;
+  height:60px;
+  background-color: rgba(255,255,255,0.6);
+  line-height:60px;
+  text-align:center;
+  font-size:30px;
+  font-weight: bold;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.bg3{
+  position:absolute;
+  background:#e8e7e7;
+  height:400px;
+  width:600px;
+  top:-15%;
+  right:15%;
+  z-index:-1;
+}
+
+@media screen and (max-width:798px){
+  .ec-saito img{
+    width:100%;
+    height:400px;
+    position:static;
+  }
+
+  .ec-saito h2 a{
+    top:-14%;
+    right:10%;
+  }
+
+  .bg3{
+    top:-15%;
+    right:0;
+    z-index:-1;
+  }
+}
+
+
+/*recruit*/
+.recruit{
+  width:100%;
+  height:500px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.recruit h2{
+  text-align:center;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.recruit-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.recruit-list li{
+  font-size:20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.recruit-list img{
+  width:100%;
+  height:auto;
+}
+
+.bg2{
+  position:absolute;
+  background:#e8e7e7;
+  height:200px;
+  width:100%;
+  top:0;
+  right:0;
+  z-index:-1;
+}
+
+@media screen and (max-width:798px){
+  .recruit{
+    position:static;
+    height:auto;
+   text-align: center;
+  }
+
+  .recruit-list{
+    display:block;
+  }
+
+  .recruit h2{
+  display: inline-block;
+  border-bottom: 2px solid black;
+  }
+
+}
+
+
+/*footer*/
+.footer {
+  padding:20px 0;
+}
+
+
+.footer h2{
+  font-size:40px;
+  font-weight:bold;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  margin-left: 20px;
+}
+
+.footer-address{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 30px 0;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  font-size: 20px;
+}
+
+.footer-address li{
+  margin-right: 30px;
+}
+
+.footer-list{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  font-size: 20px;
+}
+
+.footer-list li{
+    border-bottom: 2px solid black;
+}
+
+.copylight{
+  text-align:center;
+  font-size:0.75em;
+  margin:0;
+  line-height:100px;
+  color:#333;
+  background-color:#e8e7e7;
+}
+
+@media screen and (max-width:798px){
+  .footer{
+    height:auto;
+    background: linear-gradient(transparent 20%, lightgray 50%);
+  }
+  .footer-address{
+    font-size: 10px;
+  }
+
+  .footer-list li{
+    font-size:12px;
+      border-bottom: 2px solid black;
+  }
+}
+
+#page_top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+#page_top a {
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+#page_top a:hover {
+    background-color: #666;
+    text-decoration: none;
+}
+
+@media screen and (max-width:798px){
+  #page_top {
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+  }
+}
