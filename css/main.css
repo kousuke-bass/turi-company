@@ -86,6 +86,8 @@ margin-left:20px;
   margin-right:40px;
 font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',
 sans-serif;
+font-weight: bold;
+font-size:18px;
 }
 
 .header-list li:hover{
@@ -119,7 +121,7 @@ top:0;
 left:-100%;
 z-index: 100;
 text-align:right;
-background-color:rgb(220,220,220,0.6);
+background-color:rgb(220,220,220,0.9);
 transition: all 0.8s;
 }
 
@@ -130,6 +132,8 @@ transition: all 0.8s;
 .header-list li{
   margin: 50px 40px;
   text-align:center;
+  font-size:15px;
+
 }
 
 .click{
@@ -618,6 +622,12 @@ font-weight: bold;
 
 .footer-address li{
   margin-right: 30px;
+}
+
+.footer h2{
+  font-size:30px;
+  text-align: center;
+  margin: 0 0;
 }
 
 .footer-list{
