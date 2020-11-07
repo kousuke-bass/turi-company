@@ -49,7 +49,7 @@ a:hover {
    margin: 0 auto;
  }
 
-@media screen and (max-width:798px){
+@media screen and (max-width:985px){
   .content-wrapper{
     width:100%;
   }
@@ -99,7 +99,8 @@ font-size:18px;
   display: none;
 }
 
-@media screen and (max-width:798px){
+/*ヘッダー　ipad*/
+@media screen and (max-width:985px){
   .header h1{
   font-size: 25px;
   text-align:left;
@@ -153,8 +154,8 @@ transition: all 0.8s;
 .click p{
   margin:0 0;
 }
-
 }
+
 
 /*メイン*/
 .mainvisual{
@@ -197,7 +198,7 @@ transition: all 0.8s;
   height:100%;
 }
 
-@media screen and (max-width:798px){
+@media screen and (max-width:985px){
   .mainvisual{
     height:800px;
   }
@@ -266,9 +267,11 @@ font-size: 22px;
 font-weight: bold;
 }
 
-@media screen and (max-width:798px){
+/*コンテンツ　ipad*/
+@media screen and (max-width:985px){
   .contents{
     display:block;
+    text-align: center;
   }
 
   .greeting {
@@ -276,10 +279,18 @@ font-weight: bold;
   }
 
   .greeting img{
-    width:100%;
+    width:600px;
+    height:600px;
   }
 
   .greeting .content{
+    width:100%;
+  }
+}
+
+/*コンテンツ　スマホ*/
+@media screen and (max-width:558px){
+  .greeting img{
     width:100%;
   }
 }
@@ -445,7 +456,8 @@ font-weight: bold;
   margin:0 auto;
 }
 
-@media screen and (max-width:798px){
+/*work ipad*/
+@media screen and (max-width:985px){
 
 .work{
 }
@@ -460,6 +472,11 @@ font-weight: bold;
   .work h2{
   border-bottom: 2px solid black;
   }
+}
+
+/*work スマホ*/
+@media screen and (max-width:558px){
+
 }
 
 
@@ -579,7 +596,7 @@ font-weight: bold;
   z-index:-1;
 }
 
-@media screen and (max-width:798px){
+@media screen and (max-width:985px){
   .recruit{
     position:static;
     height:auto;
@@ -594,9 +611,225 @@ font-weight: bold;
   display: inline-block;
   border-bottom: 2px solid black;
   }
-
 }
 
+.form{
+  margin-bottom:80px;
+  padding:40px 0;
+  background-color:rgb(211, 211, 211,0.5);
+  text-align: center;
+}
+
+.form h2{
+  display:inline-block;
+  margin-bottom:50px;
+  text-align:center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Kaiti SC','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+ border-bottom: 1.5px solid black;
+}
+
+.form dl{
+  display:flex;
+  padding:20px 0;
+  border-bottom:1px dotted #676767;
+}
+
+.form dl:first-of-type{
+  border-top:1px dotted #676767;}
+
+.form dt{
+  width: 300px;
+box-sizing: border-box;
+padding: 20px 0 20px 10px;
+line-height: 1em;
+font-family: 'HanziPen SC','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+
+
+.form dd {
+  width: calc(100% - 300px);
+  box-sizing: border-box;
+  font-family: 'HanziPen SC','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  }
+
+
+
+.form dd input,
+.form dd select,
+.form dd textarea {
+  font-size: 1rem;
+  color: #777;
+  border: 1px solid #555;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+.form dd input,
+.form dd select {
+  line-height: 60px;
+  height: 60px;
+  padding: 0 20px;
+}
+.form dd textarea {
+  height: 140px;
+  line-height: 2em;
+  padding: 20px;
+}
+.form dl.name dd {
+  padding: 0 0 0 25px;
+}
+.form dl.name dd span {
+  margin: 0 20px 0 0;
+}
+.form dl.name dd input {
+  width: 350px;
+}
+.form dl.name dd input:first-of-type {
+  margin: 0 10px 0 0;
+}
+.form dl.furigana dd {
+  padding: 0 0 0 10px;
+}
+.form dl.furigana dd span {
+  margin: 0 10px 0 0;
+}
+.form dl.furigana dd input {
+  width: 350px;
+}
+.form dl.furigana dd input:first-of-type {
+  margin: 0 10px 0 0;
+}
+.form dl.mail dd input {
+  width: calc(100% - 20px);
+}
+.form dl.tel dd input {
+  width: 200px;
+}
+.form dl.tel dd span {
+  margin: 0 20px;
+}
+.form dl.zip dd input {
+  width: 200px;
+}
+.form dl.zip dd span {
+  margin: 0 20px;
+}
+.form dl.pref dd select {
+  width: 200px;
+}
+.form dl.address dd input {
+  width: calc(100% - 20px);
+}
+.form dl.multi-text dd textarea {
+  width: calc(100% - 20px);
+}
+.form .form-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0 auto;
+}
+.form .form-button input {
+  display: block;
+  width: 250px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #353535;
+  border: 1px solid #353535;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+.form .form-button input:hover {
+  background-color: transparent;
+  color: #444;
+  transition: .3s ease all;
+}
+
+.name dt span{
+  color:red;
+  margin-left:80px;
+  padding:10px 20px;
+  background-color: #DDDDDD;
+}
+
+.furigana dt span{
+  color:red;
+  margin-left:50px;
+  padding:10px 20px;
+  background-color: #DDDDDD;
+}
+
+@media screen and (max-width:985px) {
+  .form{
+  width:100%;
+  }
+
+  .form dl{
+    display:flex;
+    padding:20px 0;
+    border-bottom:1px dotted #676767;
+  }
+
+
+  .form dt{
+    width:100px;
+  }
+
+  .form dd {
+    width: calc(100% - 100px);
+}
+
+.form dd input,
+.form dd select,
+.form dd textarea {
+  font-size: 0.5rem;
+}
+
+.form dl.name dd input {
+  width: 200px;
+}
+
+.form dl.furigana dd input {
+  width:30%;
+}
+
+.form dl.tel dd input {
+  width: 95px;
+}
+
+.form dl.zip dd input {
+  width: 100px;
+}
+
+.form .form-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0 auto;
+}
+
+
+.name dt span{
+  margin:0 2px;
+  padding:10px 10px;
+}
+
+.furigana dt span{
+  display: block;
+  width:50px;
+  text-align: center;
+  margin:10px 0px;
+  padding:10px 5px;
+}
+
+
+@media screen and (max-width:558px) {
+.form dl.furigana dd input {
+  width:75%;
+}
+}
 
 /*footer*/
 .footer {
@@ -661,7 +894,7 @@ font-weight: bold;
   }
 
   .footer-list li{
-    font-size:12px;
+    font-size:10px;
       border-bottom: 2px solid black;
   }
 }
